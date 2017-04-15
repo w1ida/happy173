@@ -766,7 +766,7 @@ class WebWeixin(object):
             if msgType == 1:
                 raw_msg = {'raw_msg': msg}
                 self._showMsg(raw_msg)
-#自己加的代码-------------------------------------------#
+
                 #if self.autoReplyRevokeMode:
                 #    store
 				
@@ -792,7 +792,6 @@ class WebWeixin(object):
                             if self.webwxsendmsg(ans, msg['FromUserName']):
                                 print('自动回复: ' + ans)
                                 logging.info('自动回复: ' + ans)
-#自己加的代码-------------------------------------------#
                 if self.autoReplyMode:
                     ans = self._xiaodoubi(content) + '\n[微信机器人自动回复]'
                     if self.webwxsendmsg(ans, msg['FromUserName']):
